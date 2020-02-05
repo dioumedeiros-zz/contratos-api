@@ -14,11 +14,10 @@ module.exports = {
       email: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: true,
       },
       cpf: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
         unique: true,
       },
       loan_value: {
@@ -46,6 +45,14 @@ module.exports = {
         allowNull: true,
         references: {
           model: 'files',
+          key: 'id',
+        },
+      },
+      state_id: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'states',
           key: 'id',
         },
       },
