@@ -2,11 +2,10 @@ import Sequelize from 'sequelize';
 
 import databaseConfig from '../config/database';
 
-import Contact from '../app/models/Contract';
 import File from '../app/models/File';
-import State from '../app/models/State';
+import Contact from '../app/models/Contract';
 
-const models = [Contact, File, State];
+const models = [File, Contact];
 
 class Database {
   constructor() {

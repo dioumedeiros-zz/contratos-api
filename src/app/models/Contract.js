@@ -12,6 +12,7 @@ class Contract extends Model {
         birth_date: Sequelize.DATE,
         material_status: Sequelize.STRING,
         address: Sequelize.STRING,
+        state: Sequelize.INTEGER,
       },
       {
         sequelize,
@@ -23,7 +24,6 @@ class Contract extends Model {
 
   static associate(models) {
     this.belongsTo(models.File, { foreignKey: 'file_id', as: 'file' });
-    this.belongsTo(models.State, { foreignKey: 'state_id', as: 'state' });
   }
 }
 

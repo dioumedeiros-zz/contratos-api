@@ -26,15 +26,15 @@ module.exports = {
       },
       monthly_rent: {
         type: Sequelize.DOUBLE,
-        allowNull: false,
+        allowNull: true,
       },
       birth_date: {
         type: Sequelize.DATE,
-        allowNull: false,
+        allowNull: true,
       },
       material_status: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       address: {
         type: Sequelize.STRING,
@@ -48,13 +48,9 @@ module.exports = {
           key: 'id',
         },
       },
-      state_id: {
+      state: {
         type: Sequelize.INTEGER,
         allowNull: true,
-        references: {
-          model: 'states',
-          key: 'id',
-        },
       },
       created_at: {
         type: Sequelize.DATE,
